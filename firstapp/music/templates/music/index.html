@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+{% if all_album %}
+    <ul>
+        {% for album in all_album %}
+        <li><a href="{% url 'music:details' album.id %}">{{ album.album }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h2>You Dont have any album</h2>
+{% endif %}
